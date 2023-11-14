@@ -1,3 +1,8 @@
+@import "compass/css3";
+
+@import url("https://getbootstrap.com/dist/css/bootstrap.css");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+
 @import url("https://fonts.google.com/specimen/Pacifico?=pacifico");
 @import url("https://fonts.google.com/specimen/Unna/about?query=unna");
 @import url("https://fonts.google.com/specimen/Italianno?query=italian");
@@ -86,6 +91,87 @@ p{
   font-family: "Unna-Bold";
   font-size: 20px;
 }
+
+.sidebar-menu {
+  width: 50px;
+  background-color: #C1D0B5;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
+}
+.sidebar-menu {
+  width: 120px;
+  background-color: #C1D0B5;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
+}
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  padding: 20px 10px;
+}
+.sidebar a .justify-icon {
+  outline: 0;
+  color:#FFF8DE;
+  font-size: 24px;
+  font-style: normal;
+}
+.sidebar a .logout-icon {
+  outline: 0;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+.sidebar ul li {
+  margin: 5%;
+  padding: 5%;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.sidebar ul li a.expandable {
+  outline: 0;
+  color:#000000;
+  text-decoration: none;
+  font-size: 20px;
+  
+}
+.sidebar ul li a.expandable:hover {
+  color: #bbbbbb;
+}
+.sidebar ul li a.expandable .expanded-element {
+  margin-left: 2px;
+  display: none;
+  font-size: 11px;
+  position: relative;
+  bottom: 2px;
+}
+.sidebar ul li.active {
+  background: none repeat scroll 0 0 black;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -4px;
+  padding: 4px;
+}
+.sidebar ul li.active a.expandable {
+  color: white !important;
+}
+.sidebar ul li.active a.expandable:hover {
+  color: white !important;
+}
+
 
 .footer{
     font-family: 'Inria Sans';
