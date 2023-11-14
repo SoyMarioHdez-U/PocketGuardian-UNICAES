@@ -138,21 +138,47 @@ body {
   text-align: center;
 }
 
-.botones {
-  width:40%;
-  height: 30%;
-  font-family: "Pacifico-regular";
-  font-size: 14px;
-  background-color: beige;
-  border-radius: 15%;
-  align-items: center;
+a.button {
+  display:block;
+  padding: 0.60em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Unna-regular";
+  font-weight:200;
+  color: rgb(2, 2, 2);
   text-align: center;
-  
+  transition: all 0.2s;
+  background-color: #78909c;
+  box-shadow:inset 0 -0.5em 0 -0.40em rgba(0,0,0,0.25);
 }
 
-.botones :hover{
-  color: #8dba70;
+a.button.rounded { 
+  border-radius: 1.5em;
+  position: relative;
+}
 
+/* Button predefined | Botones predefinidos */
+a.button.iniciar { background-color: #FFF8DE; }
+a.button.registro { background-color: #FFF8DE; }
+
+
+/* Rounded Buttons | Botones redondeados */
+a.button.rounded { border-radius: 0.50em;}
+
+/* Hover state | Estado hover al pasar el mouse */
+a.button:hover {
+  color: #99a98f;
+  opacity: .85;
+}
+
+/* Responsive */
+@media all and (max-width: 30em) {
+  a.button {
+    display: block;
+    margin: 0.4em auto;
+  }
 }
 
 .lastFooter{

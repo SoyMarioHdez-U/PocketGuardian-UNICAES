@@ -67,6 +67,8 @@ p{
     display: flex;
     justify-content:space-between;
     align-items:center;
+    background-color: #99a98f;
+    box-shadow:inset;
     
 }
 
