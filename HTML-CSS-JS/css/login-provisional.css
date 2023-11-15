@@ -1,0 +1,20 @@
+.botones{
+    color: black;
+}
+
+.datos .contenedor__login-register{
+    color: black;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inria Sans', sans-serif;
+    
+}
+
+body{
+    background-image: url(https://www.solidbackgrounds.com/download/2560x1440-blue-stained-glass-free-website-background-image.jpg);
+}
