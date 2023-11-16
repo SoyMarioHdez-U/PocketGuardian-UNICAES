@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +51,9 @@
         <div class="footer">
             <div class="logoFooter"></div>
             <div class="socialNetworks">
-                <a href="http://www.facebook.com"><img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/facebook.png"></a>
-                <a href="http://www.twitter.com"><img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/twitter.png"></a>
-                <a href="http://www.instagram.com"><img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/instagram.png"></a>
+                <a href="http://www.facebook.com"><img src="C:/wamp64/www/PocketGuardian-UNICAES/HTML-CSS-JS/img/facebook.png"></a>
+                <a href="http://www.twitter.com"><img src="C:/wamp64/www/PocketGuardian-UNICAES/HTML-CSS-JS/img/twitter.png"></a>
+                <a href="http://www.instagram.com"><img src="C:/wamp64/www/PocketGuardian-UNICAES/HTML-CSS-JS/img/instagram.png"></a>
             </div>
                 <p>© 2023 PocketGuardian</p>
                 <p class="lastFooter">Tecnologías Web - Universidad Católica de El Salvador</p>
@@ -62,6 +62,6 @@
         <div class="fondo">
         
         </div>
-        <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
+        <script type='text/javascript' src='C:/wamp64/www/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
     </body>
 </html>
