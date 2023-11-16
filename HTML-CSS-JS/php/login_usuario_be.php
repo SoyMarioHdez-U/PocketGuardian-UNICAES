@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     include 'conexion_be.php';
 
     $correo_electronico = $_POST['correo_electronico'];
@@ -9,7 +9,8 @@
 
 
     if(mysqli_num_rows($validar_login)>0){
-        header("location: ../html/Cuentas.HTML");
+        $_SESSION['usuario']= $correo_electronico;
+        header("location: ../html/Cuentas.php");
     }
     
     else{
