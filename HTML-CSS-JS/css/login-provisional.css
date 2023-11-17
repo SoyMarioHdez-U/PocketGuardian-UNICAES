@@ -9,7 +9,9 @@
     font-family: 'Inria Sans', sans-serif;
 }
 
-
+.mensajeBienvenida{
+    font-family: 'Inria Sans', sans-serif;
+}
 body{
     display: flex;
     align-items: center;

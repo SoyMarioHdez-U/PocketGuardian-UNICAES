@@ -4,6 +4,8 @@
 
     $correo_electronico = $_POST['correo_electronico'];
     $password = $_POST['password'];
+    //Buscar la contraseña encriptada
+    //$password = hash('sha512', $password);
 
     $validar_login = mysqli_query($conexion, "SELECT * FROM usuario WHERE correo='$correo_electronico'
                                   AND contra='$password'");
@@ -16,6 +18,8 @@
                 window.location = "../html/Cuentas.php";
             </script>
         ';
+
+        $_SESSION['nombre_apellido'] = $usuario['nombre'] . ' ' . $usuario['apellido'];
         exit;
     }
     else{
