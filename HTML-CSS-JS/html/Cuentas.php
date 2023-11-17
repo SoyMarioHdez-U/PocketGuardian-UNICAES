@@ -1,3 +1,24 @@
+<?php
+  session_start();
+
+  if(!isset($_SESSION['usuario'])){
+    echo '
+      <script>
+        alert("Por favor, inicia sesión");
+      </script>
+    ';
+    header("location: ../html/login.php");
+    session_destroy();
+    die();
+  }
+
+
+  ?>
+
+          <h2>Bienvenido, 
+
+          <!-- Contenido adicional de la página Home -->
+
 <!DOCTYPE html>
 <html >
     <head>
@@ -10,6 +31,9 @@
         
     </head>
     <body>
+    
+
+
         <div class="container">
             <div class="header">
                 <div class="logo">
@@ -41,7 +65,7 @@
                     </a>
                   </li>
                 </ul>
-                
+        </div>
             </div>
         </div>
 

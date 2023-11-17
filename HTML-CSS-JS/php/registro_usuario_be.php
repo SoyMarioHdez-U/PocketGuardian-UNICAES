@@ -8,7 +8,7 @@
     $password = $_POST['password'];
 
     //Esto encripta la contraseña
-    $password = hash('sha512', $password);
+    //$password = hash('sha512', $password);
 
     //Validar que todos los campos estén llenos
     if (empty($correo_electronico) || empty($password) || empty($nombre) || empty($apellido)) {
@@ -34,8 +34,8 @@
             window.location = "../html/login.php";
         </script>
         ';
-        exit();
         mysqli_close($conexion);
+        
     }
 
 
@@ -45,7 +45,8 @@
     if($ejecutar){
         echo '
         <script>
-            alert("Usuario almacenado con éxito")
+            alert("Usuario almacenado con éxito");
+            window.location = "../html/login.php";
         </script>
         ';
     }

@@ -6,8 +6,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Unna-regular";
+    font-family: 'Inria Sans', sans-serif;
 }
+
 
 body{
     display: flex;

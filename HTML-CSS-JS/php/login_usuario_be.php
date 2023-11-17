@@ -5,14 +5,19 @@
     $correo_electronico = $_POST['correo_electronico'];
     $password = $_POST['password'];
 
-    $validar_login = mysqli_query($conexion, "SELECT * FROM usuario WHERE correo='$correo_electronico' AND contra='$password'");
+    $validar_login = mysqli_query($conexion, "SELECT * FROM usuario WHERE correo='$correo_electronico'
+                                  AND contra='$password'");
 
 
     if(mysqli_num_rows($validar_login)>0){
-        $_SESSION['usuario']= $correo_electronico;
-        header("location: ../html/Cuentas.php");
+        $_SESSION['usuario'] = $correo_electronico;
+        echo '
+            <script>
+                window.location = "../html/Cuentas.php";
+            </script>
+        ';
+        exit;
     }
-    
     else{
         echo '
             <script>
@@ -20,6 +25,7 @@
                 window.location = "../html/login.php";
             </script>
         ';
+        exit;
     }
 
 ?>
