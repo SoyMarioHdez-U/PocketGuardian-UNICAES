@@ -25,13 +25,24 @@
             // Obtener los datos del usuario
             $fila_usuario = mysqli_fetch_assoc($consulta_usuario);
             $nombre_usuario = $fila_usuario['nombre'];
-            $apellido_usuario = $fila_usuario['apellido'];
-
-
-            
+            $apellido_usuario = $fila_usuario['apellido'];            
         }
 
-  //Obtenemos el número de cuentas y generamos
+        //Obtenemos el número de cuentas y generamos los objetos
+        $query = "SELECT u.id_usuario, u.nombre, u.apellido, u.correo, COUNT(c.id_cuenta) as total_cuentas
+        FROM usuario u
+        LEFT JOIN cuenta c ON u.id_usuario = c.id_usuario
+        WHERE u.correo = '$correo_electronico'
+        GROUP BY u.id_usuario, u.nombre, u.apellido, u.correo";
+
+      $resultado = mysqli_query($conexion, $query);
+
+      if ($resultado) {
+          $fila = mysqli_fetch_assoc($resultado);
+          $total_cuentas = $fila['total_cuentas'];
+
+          echo "El usuario $nombre_usuario $apellido_usuario tiene $total_cuentas cuentas.";
+      }
 ?>
 
 
@@ -42,14 +53,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cuentas</title>
         
+        
+        <link rel="icon" href="../Png/pgLogo1" type="image/png">
+
+
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
+        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         
     </head>
     <body>
-    
-
-
         <div class="container">
             <div class="header">
                 <div class="logo">
@@ -58,37 +71,56 @@
                 </div>
                 </div>
             </div>
-            <div class="mensajeBienvenida">
-            <?php
-            // Mostrar mensaje de bienvenida
-            echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
-            ?>
-            </div>
-            <div class='sidebar-menu'>
-                
-                <ul>
-                  <li class='active'>
-                    <a class='expandable' href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Cuentas.php" title='Cuentas'>
-                        <img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/Png/cuentas.png" width="70%" height="70%">
-                      <span class='expanded-element'>Cuentas</span>
-                    </a>
-                  </li>
+
+            <div>
+              <div class='sidebar-menu'>
                   
-                  <li>
-                    <a class='expandable' href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Estadisticas.php" title='Estadisticas'>
-                        <img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/Png/grafico.png" width="60%" height="60%">
-                      <span class='expanded-element'>Estadisticas</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class='expandable' href='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Configuraciones.html' title='Configuraciones'>
-                        <img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/Png/confi.png" width="60%" height="60%">
-                      <span class='expanded-element'>Configuraciones</span>
-                    </a>
-                  </li>
-                </ul>
-        </div>
+                  <ul>
+                    <li class='active'>
+                      <a class='expandable' href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Cuentas.php" title='Cuentas'>
+                          <img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/Png/cuentas.png" width="70%" height="70%">
+                        <span class='expanded-element'>Cuentas</span>
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a class='expandable' href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Estadisticas.php" title='Estadisticas'>
+                          <img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/Png/grafico.png" width="60%" height="60%">
+                        <span class='expanded-element'>Estadisticas</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class='expandable' href='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Configuraciones.html' title='Configuraciones'>
+                          <img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/Png/confi.png" width="60%" height="60%">
+                        <span class='expanded-element'>Configuraciones</span>
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+              <div class = "container"> <!-- Contenerdor de espacio de la pagina-->
+              <div class="mensajeBienvenida">
+                <?php
+                // Mostrar mensaje de bienvenida
+                echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
+                ?>
+              </div>
+
+
+                <div class="cheques"> <!-- Contenerdor de los cheques creados -->
+
+                  <!-- Espacio para los contenedores creados -->
+
+
+
+                </div>
+              </div>
+              <input type="text" id="miInput">
+              <button onclick="obtenerValorDelInput2()">Obtener Valor</button>
+
+              <button onclick="obtenerValorDelInput()">Generar</button>
+
             </div>
+          </div>
         </div>
 
         <div class="cuentas">
@@ -108,6 +140,7 @@
         <div class="fondo">
         
         </div>
-        <script type='text/javascript' src='C:/wamp64/www/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
+        <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
+        <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
     </body>
 </html>
