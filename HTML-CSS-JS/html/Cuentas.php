@@ -63,6 +63,10 @@
         
     </head>
     <body>
+      <script>
+        var totalCuentas = <?php echo $total_cuentas; ?>;
+      </script>
+
         <div class="container">
             <div class="header">
                 <div class="logo">
@@ -114,11 +118,6 @@
 
                 </div>
               </div>
-              <input type="text" id="miInput">
-              <button onclick="obtenerValorDelInput2()">Obtener Valor</button>
-
-              <button onclick="obtenerValorDelInput()">Generar</button>
-
             </div>
           </div>
         </div>
