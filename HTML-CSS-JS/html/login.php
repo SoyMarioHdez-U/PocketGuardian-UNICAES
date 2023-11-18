@@ -1,3 +1,15 @@
+
+<?php
+    /*
+    session_start();
+
+    if(isset($_SESSION['usuario'])){
+        header("location: ../html/Cuentas.php");
+    }
+    */
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
