@@ -17,12 +17,23 @@
     
   }
   $correo_electronico = $_SESSION['usuario'];
-
+      //Obtenemos nombre y apellido del usuario para mostrarlo
       $nombre_usuario = obtenerNombre($conexion, $correo_electronico);
       $apellido_usuario = obtenerApellido($conexion, $correo_electronico);
-
+      
+      //Obtenemos la cantidad de cuentas que tiene el usuario
       $total_cuentas = obtenerNumeroCuentas($conexion, $correo_electronico);
-      echo "El usuario $nombre_usuario $apellido_usuario tiene $total_cuentas cuenta(s).";
+  //    echo "El usuario $nombre_usuario $apellido_usuario tiene $total_cuentas cuenta(s).";
+
+      //Obtener el ID para luego mostrar el total de su cuenta
+      $id_usuario = obtenerID($conexion, $correo_electronico);
+      //echo " | Id del usuario es: $id_usuario";
+
+      //Obtener los nombres de las cuentas
+      $nombre_de_cuentas = obtenerDatosDeCuentas($conexion, $id_usuario);
+      foreach ($nombre_de_cuentas as $nombre) {
+//        echo $nombre . "<br>";
+    }
 ?>
 
 
@@ -46,6 +57,7 @@
       <!--  Aquí envío el dato de cuántas cuentas posee el usuario !-->
       <script>
         var totalCuentas = <?php echo $total_cuentas; ?>;
+        var nombresCuenta = <?php echo json_encode($nombre_de_cuentas); ?>;
       </script>
 
         <div class="container">

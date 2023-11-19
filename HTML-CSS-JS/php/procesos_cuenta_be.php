@@ -47,5 +47,61 @@ function obtenerApellido($conexion, $correo_electronico){
     return $apellido_usuario;
 }
 
+function obtenerDatosDeCuentas($conexion, $id_usuario){
+    // Consulta SQL para obtener los nombres de cuenta del usuario específico
+    $consulta_cuentas = "SELECT nombre_cuenta FROM cuenta WHERE id_usuario = '$id_usuario'";
+
+    // Ejecutar la consulta
+    $resultado = mysqli_query($conexion, $consulta_cuentas);
+
+    // Verificar si la consulta fue exitosa
+    if ($resultado) {
+        // Inicializar un array para almacenar los nombres de cuenta
+        $nombresDeCuenta = array();
+
+        // Recorrer los resultados y almacenar los nombres de cuenta en el array
+        while ($fila = $resultado->fetch_assoc()) {
+            $nombresDeCuenta[] = $fila['nombre_cuenta'];
+        }
+
+        return $nombresDeCuenta;
+
+    } else {
+        // Manejar el caso en el que la consulta falla
+        echo "Error en la consulta: " . $conexion->error;
+    }
+}
+
+
+
+function obtenerID($conexion, $correo_electronico){
+    // Consultar la base de datos para obtener el nombre y apellido del usuario
+    $consulta_id = mysqli_query($conexion, "SELECT id_usuario FROM usuario WHERE correo='$correo_electronico'");
+        
+    // Verificar si la consulta fue exitosa
+    if($consulta_id){
+        // Obtener los datos del usuario
+        $fila_usuario = mysqli_fetch_assoc($consulta_id);
+        $id_usuario = $fila_usuario['id_usuario'];            
+        return $id_usuario;
+    }
+    return 0;
+}
+
+function obtenerBalance($conexion, $id_usuario){
+    // Consultar la base de datos para obtener el nombre y apellido del usuario
+    $consulta_balance = mysqli_query($conexion, "SELECT SUM(CASE WHEN id_tipo = 0 THEN monto ELSE -monto END) AS balance FROM transacciones WHERE id_cuenta = $id_usuario");
+        
+    // Verificar si la consulta fue exitosa
+    if($consulta_balance){
+        // Obtener los datos del usuario
+        $fila_usuario = mysqli_fetch_assoc($consulta_balance);
+        $balance = $fila_usuario['balance'];            
+        return $balance;
+    }
+    return 0;
+}
+
+
 
 ?>
