@@ -13,13 +13,13 @@
 
     if(mysqli_num_rows($validar_login)>0){
         $_SESSION['usuario'] = $correo_electronico;
+        
         echo '
             <script>
                 window.location = "../html/Cuentas.php";
             </script>
         ';
-
-        $_SESSION['nombre_apellido'] = $usuario['nombre'] . ' ' . $usuario['apellido'];
+        
         exit;
     }
     else{
@@ -32,4 +32,5 @@
         exit;
     }
 
+    
 ?>

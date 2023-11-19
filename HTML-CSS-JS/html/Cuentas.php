@@ -2,6 +2,7 @@
 
   session_start();
   include '../php/conexion_be.php';
+  include '../php/procesos_cuenta_be.php';
 
   if(!isset($_SESSION['usuario'])){
     echo '
@@ -17,32 +18,11 @@
   }
   $correo_electronico = $_SESSION['usuario'];
 
-        // Consultar la base de datos para obtener el nombre y apellido del usuario
-        $consulta_usuario = mysqli_query($conexion, "SELECT nombre, apellido FROM usuario WHERE correo='$correo_electronico'");
-        
-        // Verificar si la consulta fue exitosa
-        if($consulta_usuario){
-            // Obtener los datos del usuario
-            $fila_usuario = mysqli_fetch_assoc($consulta_usuario);
-            $nombre_usuario = $fila_usuario['nombre'];
-            $apellido_usuario = $fila_usuario['apellido'];            
-        }
+      $nombre_usuario = obtenerNombre($conexion, $correo_electronico);
+      $apellido_usuario = obtenerApellido($conexion, $correo_electronico);
 
-        //Obtenemos el número de cuentas y generamos los objetos
-        $query = "SELECT u.id_usuario, u.nombre, u.apellido, u.correo, COUNT(c.id_cuenta) as total_cuentas
-        FROM usuario u
-        LEFT JOIN cuenta c ON u.id_usuario = c.id_usuario
-        WHERE u.correo = '$correo_electronico'
-        GROUP BY u.id_usuario, u.nombre, u.apellido, u.correo";
-
-      $resultado = mysqli_query($conexion, $query);
-
-      if ($resultado) {
-          $fila = mysqli_fetch_assoc($resultado);
-          $total_cuentas = $fila['total_cuentas'];
-
-          echo "El usuario $nombre_usuario $apellido_usuario tiene $total_cuentas cuentas.";
-      }
+      $total_cuentas = obtenerNumeroCuentas($conexion, $correo_electronico);
+      echo "El usuario $nombre_usuario $apellido_usuario tiene $total_cuentas cuenta(s).";
 ?>
 
 
@@ -63,6 +43,7 @@
         
     </head>
     <body>
+      <!--  Aquí envío el dato de cuántas cuentas posee el usuario !-->
       <script>
         var totalCuentas = <?php echo $total_cuentas; ?>;
       </script>

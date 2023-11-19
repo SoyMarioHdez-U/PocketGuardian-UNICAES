@@ -1,28 +1,51 @@
 <?php
-// ... (código de conexión)
-include conexion_be;
 
-$sql = "SELECT cuentas.nombre_cuenta, transacciones.monto, transacciones.tipo_movimiento, transacciones.fecha, transacciones.descripcion 
-        FROM cuentas 
-        JOIN transacciones ON cuentas.id = transacciones.cuenta_id";
+function obtenerNumeroCuentas($conexion, $correo_electronico) {
+    $query = "SELECT u.id_usuario, u.nombre, u.apellido, u.correo, COUNT(c.id_cuenta) as total_cuentas
+              FROM usuario u
+              LEFT JOIN cuenta c ON u.id_usuario = c.id_usuario
+              WHERE u.correo = '$correo_electronico'
+              GROUP BY u.id_usuario, u.nombre, u.apellido, u.correo";
 
-$result = $conn->query($sql);
+    $resultado = mysqli_query($conexion, $query);
 
-$data = array();
+    if ($resultado) {
+        $fila = mysqli_fetch_assoc($resultado);
+        $total_cuentas = $fila['total_cuentas'];
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
+        return $total_cuentas;
     }
+
+    // Si hay un error en la consulta, podrías manejarlo de alguna manera (lanzar una excepción, devolver un valor predeterminado, etc.).
+    return 0; // Por ejemplo, devolver 0 si no se pudo obtener el número de cuentas.
 }
 
-// Convertir el array a formato JSON
-$json_data = json_encode($data);
+function obtenerNombre($conexion, $correo_electronico){
+    // Consultar la base de datos para obtener el nombre y apellido del usuario
+    $consulta_usuario = mysqli_query($conexion, "SELECT nombre, apellido FROM usuario WHERE correo='$correo_electronico'");
+        
+    // Verificar si la consulta fue exitosa
+    if($consulta_usuario){
+        // Obtener los datos del usuario
+        $fila_usuario = mysqli_fetch_assoc($consulta_usuario);
+        $nombre_usuario = $fila_usuario['nombre'];
+    }
+    return $nombre_usuario;
 
-// Cerrar conexión
-$conn->close();
+}
 
-// Enviar datos JSON al frontend
-echo $json_data;
+function obtenerApellido($conexion, $correo_electronico){
+    // Consultar la base de datos para obtener el nombre y apellido del usuario
+    $consulta_usuario = mysqli_query($conexion, "SELECT nombre, apellido FROM usuario WHERE correo='$correo_electronico'");
+        
+    // Verificar si la consulta fue exitosa
+    if($consulta_usuario){
+        // Obtener los datos del usuario
+        $fila_usuario = mysqli_fetch_assoc($consulta_usuario);
+        $apellido_usuario = $fila_usuario['apellido'];            
+    }
+    return $apellido_usuario;
+}
+
 
 ?>
