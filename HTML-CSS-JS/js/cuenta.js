@@ -33,6 +33,8 @@ function obtenerValorDelInput() {
   }
 
 
+  
+
   document.addEventListener('DOMContentLoaded', function() {
     // Llamar a la función al cargar la página
     recibirNumeroCuentas(totalCuentas);
