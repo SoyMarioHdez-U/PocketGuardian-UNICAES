@@ -302,3 +302,8 @@ p{
 
 }
   
+.hide{
+  position:absolute;
+  transform: translateY(-300%);
+  
+}

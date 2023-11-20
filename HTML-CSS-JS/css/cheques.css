@@ -108,6 +108,7 @@ body
 .menu-flotante .submenu i{
     align-content: center;
     justify-content:center;
+    cursor: pointer;
     font-size: 20px;
     color: black;
     position: absolute;

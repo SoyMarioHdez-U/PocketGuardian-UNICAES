@@ -119,8 +119,8 @@
               </div>
 
               <div class="submenu">
-              <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
-              <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+              <i style="--i:1;" type="button" class='bx bxs-wallet' id="cuenta" >Cuenta</i>
+              <i style="--i:2;" type="button"  class='bx bx-dollar-circle' id="trans" >Transaccion</i>
               </div>
             </div>
             </div>
@@ -129,7 +129,7 @@
             </div>
 
             
-           <div class="modal_cuenta">
+           <div class="modal_cuenta cuentas hide">
           
             <div class="modal_containerC">
               <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
@@ -139,10 +139,20 @@
               <input type="button" class="boton" id="cancelar" value="Cancelar">
               
             </div>  
+
+            <div class="modal_cuenta trans ">
+          
+            <div class="modal_containerC">
+              <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
+              <i class='bx bx-dollar-circle'></i>
+              <input class="datos"  type="texto"  placeholder="Monto" nombre="Monto">
+              <input class="datos"  type="texto"  placeholder="Descripcion" nombre="Descripcion">
+              <input class="datos"  type="combobox" placeholder="select" nombre="cuentas">
+              <input type="button" class="boton" id="Agregar" value="Añadir">
+              <input type="button" class="boton" id="cancelar" value="Cancelar">
+              
+            </div>  
         
-
-
-
     </div>
 
 
@@ -166,12 +176,13 @@
         </div>
         <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
-
         <script>
           var menu = document.querySelector("#floatmenu");
-          menu.onclick =function(){
-            menu.classList.toggle("active");
-          }
-        </script>
+   menu.onclick =function(){
+    menu.classList.toggle("active");
+}
+        </Script>
+
+        
     </body>
 </html>
