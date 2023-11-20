@@ -21,7 +21,7 @@ function dibujarCheques() {
 
             str +=  '<div class="crear">'+ // Aqui recalcar mas que todo que tengas cuidado con las comillas, porque son importantes, solo segui este ejemplo al tu crear los cheques
             '<div> <b>Cuenta #'+(i+1)+'</b></div>'+            // Como ves, es como si estuviera en la parte de HTML pero desde el javascript, podes colocar clases y todo lo que queras pero entre comillas.
-            '<div>'+nombresCuenta[i]+'</div>'+
+            '<div>'+nombresCuenta[i].cuentas+'</div>'+
             '</div>';
 
         }

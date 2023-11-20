@@ -99,7 +99,7 @@
                     </li>
                   </ul>
               </div>
-              <div class = "container"> <!-- Contenerdor de espacio de la pagina-->
+              <div class = "containerCheques"> <!-- Contenerdor de espacio de la pagina-->
               <div class="mensajeBienvenida">
                 <?php
                 // Mostrar mensaje de bienvenida
