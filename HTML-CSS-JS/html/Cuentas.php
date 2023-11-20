@@ -1,5 +1,6 @@
-<?php
 
+<?php
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -36,6 +37,8 @@
       foreach ($cuentas as $nombre) {
 //        echo $nombre . "<br>";
     }
+
+    */
 ?>
 
 
@@ -106,6 +109,7 @@
 
 
                 <div class="cheques"> <!-- Contenerdor de los cheques creados -->
+                
 
                   <!-- Espacio para los contenedores creados -->
 
