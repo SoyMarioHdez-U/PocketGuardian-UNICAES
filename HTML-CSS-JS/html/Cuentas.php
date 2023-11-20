@@ -55,6 +55,7 @@
 
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         
     </head>
@@ -107,18 +108,18 @@
                 <?php
                 // Mostrar mensaje de bienvenida
                 echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
-                ?>
-              </div>
-                
-
-                  <!-- Espacio para los contenedores creados -->
-
-
-
-                </div>
-              </div>
+                ?> 
+            </div>
+                <!-- Espacio para los contenedores creados -->
+            <div class="icons">
+            <i class='bx bx-message-square-add'></i>
+            </div>
+            </div>
+            </div>
             
             </div>
+
+            
         </div>
         <div class="footer">
             <div class="logoFooter"></div>
