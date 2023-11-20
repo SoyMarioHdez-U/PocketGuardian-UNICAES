@@ -1,5 +1,6 @@
 <?php
-//include '../php/Objetos.php';
+
+
 
 function obtenerNumeroCuentas($conexion, $correo_electronico) {
     $query = "SELECT u.id_usuario, u.nombre, u.apellido, u.correo, COUNT(c.id_cuenta) as total_cuentas
@@ -148,6 +149,8 @@ function obtenerID($conexion, $correo_electronico){
     }
     return 0;
 }
+
+
 
 function obtenerIDcuenta($conexion, $id_usuario, $nombre_cuenta){
     $consulta_id_cuenta = mysqli_query($conexion, "SELECT id_cuenta FROM cuenta WHERE nombre_cuenta='$nombre_cuenta' AND id_usuario='$id_usuario'");
