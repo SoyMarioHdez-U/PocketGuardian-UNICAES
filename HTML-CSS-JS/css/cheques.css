@@ -31,9 +31,9 @@ body
 .cheques
 {
 
-    background-color: rgba(255, 248, 222, .6);
-    background-image: url(http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/png/pgLogo3);
-    background-size: 10%;
+    background-image: url(http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/bg_login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
     width: 50%;
     height:50vh;
@@ -50,7 +50,10 @@ body
 .crear
 {
 
-    background-color: aquamarine;
+    background-color: rgba(255, 248, 222, .6);
+    background-image: url(http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/png/pgLogo3);
+    background-size: 5%;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
     width: 40%;
     height:12vh;
 
