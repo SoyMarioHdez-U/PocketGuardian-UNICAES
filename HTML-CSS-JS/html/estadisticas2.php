@@ -1,4 +1,3 @@
-
 <?php
 
   session_start();
@@ -54,7 +53,7 @@
 
 
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
-        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
+        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estadisticas2.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         <script  type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/modal.js'></script>
@@ -104,24 +103,21 @@
               </div>
             
             <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
-            <div class="mensajeBienvenida">
-                <?php
-                // Mostrar mensaje de bienvenida
-                echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
-                ?> 
-            </div>
-
-            <div class="cheques"> <!-- Contenerdor de los cheques creados -->
+            
+            <div class="estadisticas"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-            <div class="opciones">
-              <div class="botonesss">
-              <input type="button" class="cuenta" id="cuenta" value="Nueva Cuenta">
-              <input type="button" class="transaccion" id="trans" value="Transaccion">
+                <div class="menu-flotante" id="floatmenu">
+                  <div class="menu">
+                      <i id="mainIcon" class='bx bx-message-square-add'></i>
+                  </div>
 
-              </div>
-            
-            </div>
+                  <div class="submenu">
+                      <i id="cuentaIcon" style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
+                      <i id="transaccionIcon" style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+                  </div>
+                </div>
+                
 
             </div>
 
@@ -137,7 +133,7 @@
               
             </div>  
 
-            <div class="modal_cuenta trans hide">
+            <div class="modal_cuenta trans ">
           
             <div class="modal_containerC">
               <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
@@ -175,9 +171,9 @@
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         <script>
           var menu = document.querySelector("#floatmenu");
-   menu.onclick =function(){
-    menu.classList.toggle("active");
-}
+            menu.onclick =function(){
+              menu.classList.toggle("active");
+          }
         </Script>
 
         
