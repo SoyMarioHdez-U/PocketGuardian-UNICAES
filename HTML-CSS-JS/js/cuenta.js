@@ -22,7 +22,8 @@ function dibujarCheques(cuentasGuardadas) {
 
             str +=  '<div class="crear">'+ // Aqui recalcar mas que todo que tengas cuidado con las comillas, porque son importantes, solo segui este ejemplo al tu crear los cheques
             '<div> <b>Cuenta #'+(i+1)+'</b></div>'+            // Como ves, es como si estuviera en la parte de HTML pero desde el javascript, podes colocar clases y todo lo que queras pero entre comillas.
-            '<div>'+cuentasGuardadas[i]+'</div>'+
+            '<div><b>Nombre cuenta: </b>'+cuentasGuardadas[i].nombre_cuenta+'</div>'+
+            '<div><b>Saldo:</b> $'+cuentasGuardadas[i].saldo+'</div>'+
             '</div>';
 
         }
@@ -52,7 +53,7 @@ function dibujarCheques(cuentasGuardadas) {
     // Por ejemplo, aquí se muestra cómo iterar sobre los nombres de cuenta
     
     // Convertir el JSON a un objeto JavaScript
-    let datosObjeto = JSON.parse(nombresCuenta);
+    
 
       nombresCuenta.forEach(function(nombre) {
         console.log("array11",nombre);
@@ -64,8 +65,9 @@ function dibujarCheques(cuentasGuardadas) {
         // Por ejemplo, puedes usarlos para generar elementos en el DOM
         // o realizar otras operaciones en el lado del cliente.
     }); 
-    console.log("PRUEBA OTRA VEZ", cuentasGuardadas[1].nombre_cuenta);                              
     
-    dibujarCheques(cuentasGuardadas);
+    let datosObjeto = (nombresCuenta);
+    console.log("PRUEBA DEFINITIVA", datosObjeto[0].nombre_cuenta);
+    dibujarCheques(datosObjeto);
 
 });
