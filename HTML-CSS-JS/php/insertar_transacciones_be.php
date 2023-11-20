@@ -33,6 +33,9 @@
         exit(); 
     }
 
+    // Convierte la fecha al formato de MySQL
+    $fecha_mysql = date("Y-m-d", strtotime($fecha));
+
     $query = "INSERT INTO transacciones(monto, descripcion, fecha, id_cuenta, id_tipo) 
               VALUES($monto, '$descripcion', '2023-10-10', $id_cuenta, $tipo_transaccion)";
 

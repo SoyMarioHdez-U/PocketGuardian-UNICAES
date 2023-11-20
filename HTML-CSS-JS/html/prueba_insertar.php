@@ -76,16 +76,12 @@ session_start();
                     </select>
                     Tipo de transacción: <select name="tipo_transaccion">
                         <option value="0">Ingreso</option>
-                        <option value="1" selected>Egreso</option>
+                        <option value="1">Egreso</option>
                     </select>
                     Fecha:  <input type="date" name="fecha" id="fecha" max="<?php echo date('2023-11-20'); ?>">
                    
                    <button class="botones">Añadir</button>
-   
-   
-                   
-                
-   
+
                </form>
            </div>
            <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/transacciones.js"></script>
