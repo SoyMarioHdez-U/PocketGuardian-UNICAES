@@ -1,6 +1,6 @@
 
 <?php
-
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -37,7 +37,7 @@
     //  foreach ($cuentas as $nombre) {
 //        echo $nombre . "<br>";
     //}
-
+*/
 
 
 ?>
@@ -57,7 +57,8 @@
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
-        
+        <script  type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/modal.js'></script>
+
     </head>
     <body>
       <!--  Aquí envío el dato de cuántas cuentas posee el usuario !-->
@@ -113,35 +114,45 @@
             <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-              <div class="menu-flotante" Id="floatmenu">
-                <div class="menu">
-                  <i class='bx bx-message-square-add'></i>
-                </div>
+                <div class="menu-flotante" id="floatmenu">
+    <div class="menu">
+        <i id="mainIcon" class='bx bx-message-square-add'></i>
+    </div>
 
-                <div class="submenu">
-                  <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
-                  <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
-                </div>
-              </div>
+    <div class="submenu">
+        <i id="cuentaIcon" style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
+        <i id="transaccionIcon" style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+    </div>
+</div>
+
             </div>
-            </div>
+
             
-            </div>
-
-
-           <section class="modal_cuenta">
+           <div class="modal_cuenta cuentas hide">
+          
             <div class="modal_containerC">
               <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
-              <i class='bx bxs-wallet'>Cuenta</i>
+              <i class='bx bxs-wallet'></i>
               <input class="datos"  type="texto"  placeholder="Nombre de Cuenta" nombre="Nueva_cuenta">
               <input type="button" class="boton" id="Agregar" value="Añadir">
               <input type="button" class="boton" id="cancelar" value="Cancelar">
+              
+            </div>  
+
+            <div class="modal_cuenta trans ">
+          
+            <div class="modal_containerC">
+              <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
+              <i class='bx bx-dollar-circle'></i>
+              <input class="datos"  type="texto"  placeholder="Monto" nombre="Monto">
+              <input class="datos"  type="texto"  placeholder="Descripcion" nombre="Descripcion">
+              <input class="datos"  type="combobox" placeholder="select" nombre="cuentas">
+              <input type="button" class="boton" id="Agregar" value="Añadir">
+              <input type="button" class="boton" id="cancelar" value="Cancelar">
+              
             </div>  
         
-
-
-
-           </section>
+    </div>
 
 
            </div>
@@ -164,12 +175,13 @@
         </div>
         <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
-
         <script>
           var menu = document.querySelector("#floatmenu");
-          menu.onclick =function(){
-            menu.classList.toggle("active");
-          }
-        </script>
+   menu.onclick =function(){
+    menu.classList.toggle("active");
+}
+        </Script>
+
+        
     </body>
 </html>
