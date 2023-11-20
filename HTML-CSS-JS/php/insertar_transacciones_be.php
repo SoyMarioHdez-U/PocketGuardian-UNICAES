@@ -21,7 +21,7 @@
       $fecha = $_POST['fecha'];
 
     
-
+/*
     //Validar que todos los campos estén llenos
     if (empty($monto)||empty($descripcion)||empty($id_cuenta)||empty($tipo_transaccion)) {
         echo '
@@ -32,7 +32,7 @@
         ';
         exit(); 
     }
-
+*/
     // Convierte la fecha al formato de MySQL
     $fecha_mysql = date("Y-m-d", strtotime($fecha));
 

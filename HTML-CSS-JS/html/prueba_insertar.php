@@ -69,7 +69,7 @@ session_start();
                <form action="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/php/insertar_transacciones_be.php" method="POST" class="formulario-login">
                    <h1>PocketGuardian</h1>
                    <h2>Añadir transacción</h2>
-                   Monto: $ <input class="datos" type="number" inputmode="numeric" placeholder="Monto"  name="monto">
+                   Monto: $ <input class="datos" type="text" inputmode="numeric" placeholder="Monto"  name="monto">
                    Descripción: <input class="datos" type="text" placeholder="Descripción"  name="descripcion">
                    Cuenta: <select class ="id_cuentas"name="cuenta">
                         
