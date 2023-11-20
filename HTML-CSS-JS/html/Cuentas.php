@@ -100,7 +100,7 @@
                   </ul>
               </div>
             
-              <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
+            <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
               <div class="mensajeBienvenida">
                 <?php
                 // Mostrar mensaje de bienvenida
@@ -119,7 +119,7 @@
                 </div>
               </div>
             
-          </div>
+            </div>
         </div>
         <div class="footer">
             <div class="logoFooter"></div>

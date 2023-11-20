@@ -12,15 +12,15 @@
 .mensajeBienvenida{
     font-family: 'Inria Sans', sans-serif;
 }
+
 body{
+    background-image: url(http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/bg_login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/bg_login.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
     /*background:blanchedalmond; /* Navegadores viejos */
     /*background: -webkit-linear-gradient(
       to left,
@@ -34,17 +34,6 @@ body{
       beige
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-body:before {
-	content:'';
-	position:static;
-    top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(0,0,0,0.6);
-}
-
 
 .form-login{
 
