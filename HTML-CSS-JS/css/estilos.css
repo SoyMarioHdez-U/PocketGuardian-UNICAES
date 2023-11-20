@@ -4,8 +4,9 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
 @import url("https://fonts.google.com/specimen/Pacifico?=pacifico");
-@import url("https://fonts.google.com/specimen/Unna/about?query=unna");
-@import url("https://fonts.google.com/specimen/Italianno?query=italian");
+@import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna&family=Young+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 *,
 *:before,
@@ -26,7 +27,7 @@
 
 body{
 
-  font-family: "Pacifico", "unna-regular";
+  font-family: "Pacifico",'Unna', serif;
   width: 100%;
   height: 100%;
   background:#DBEAD2; /* Navegadores viejos */
@@ -54,7 +55,7 @@ p{
     position: center;
     top: 0;
     left: 0;
-    font-family: "Pacifico-Regular", Helvetica;
+    font-family: "Pacifico", 'Unna';
     font-weight: 40px;
     color: #000000;
     font-size: 32px;
@@ -98,7 +99,7 @@ p{
 
 .Desconectar{
   color: #FFF8DE;
-  font-family: "Unna-Bold";
+  font-family: 'Unna';
   font-size: 20px;
 }
 
@@ -110,7 +111,7 @@ p{
   justify-content:space-between;
   align-items: center;
   text-align: center;
-  font-family: "Italianno";
+  font-family: 'Young Serif';
 }
 .sidebar-menu {
   position: absolute;
@@ -159,6 +160,7 @@ p{
   color:#000000;
   text-decoration: none;
   font-size: 20px;
+  font-family: 'Young Serif';
   
 }
 .sidebar ul li a.expandable:hover {
@@ -171,6 +173,7 @@ p{
   position: relative;
   bottom: 2px;
   text-decoration: none;
+  font-family: 'Young Serif';
 }
 
 .expanded-element a{
@@ -212,6 +215,6 @@ p{
 
   .mensajeBienvenida{
     font-family: "Italianno";
-    font-size: 16px;
+    font-size: 24px;
 
   }
