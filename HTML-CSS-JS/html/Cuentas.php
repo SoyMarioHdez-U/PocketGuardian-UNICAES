@@ -1,6 +1,6 @@
 
 <?php
-
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -37,7 +37,7 @@
     //  foreach ($cuentas as $nombre) {
 //        echo $nombre . "<br>";
     //}
-
+*/
 
 
 ?>
@@ -57,7 +57,8 @@
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
-        
+        <script  type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/modal.js'></script>
+
     </head>
     <body>
       <!--  Aquí envío el dato de cuántas cuentas posee el usuario !-->
@@ -113,19 +114,17 @@
             <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-              <div class="menu-flotante" Id="floatmenu">
-                <div class="menu">
-                  <i class='bx bx-message-square-add'></i>
-                </div>
+                <div class="menu-flotante" id="floatmenu">
+    <div class="menu">
+        <i id="mainIcon" class='bx bx-message-square-add'></i>
+    </div>
 
-              <div class="submenu">
-              <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
-              <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
-              </div>
-            </div>
-            </div>
-            </div>
-            
+    <div class="submenu">
+        <i id="cuentaIcon" style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
+        <i id="transaccionIcon" style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+    </div>
+</div>
+
             </div>
 
             
