@@ -56,9 +56,8 @@ function dibujarCheques(cuentasGuardadas) {
     
 
       nombresCuenta.forEach(function(nombre) {
-        console.log("array11",nombre);
         cuentasGuardadas.push(nombresCuenta);
-        console.log("cuentasGuardadas prueba", cuentasGuardadas);
+        
         
 
         // Aquí puedes agregar lógica para utilizar cada nombre de cuenta
@@ -67,7 +66,8 @@ function dibujarCheques(cuentasGuardadas) {
     }); 
     
     let datosObjeto = (nombresCuenta);
-    console.log("PRUEBA DEFINITIVA", datosObjeto[0].nombre_cuenta);
+    console.log("ARRAY DE CUENTAS", datosObjeto);
     dibujarCheques(datosObjeto);
 
 });
+

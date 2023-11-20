@@ -63,6 +63,7 @@
       <script>
         var totalCuentas = <?php echo $total_cuentas; ?>;
         var nombresCuenta = <?php echo json_encode($cuentas); ?>;
+        console.log(<?php echo $id_usuario; ?>);
       </script>
 
         <div class="container">
