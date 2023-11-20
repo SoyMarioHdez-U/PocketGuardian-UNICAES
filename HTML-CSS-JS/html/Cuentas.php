@@ -1,6 +1,6 @@
 
 <?php
-
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     //}
 
-  
+*/  
 ?>
 
 
@@ -113,8 +113,15 @@
                 <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-            <div class="icons">
-            <i class='bx bx-message-square-add'></i>
+            <div class="menu-flotante" Id="floatmenu">
+              <div class="menu">
+              <i class='bx bx-message-square-add'></i>
+              </div>
+
+              <div class="submenu">
+              <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
+              <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+              </div>
             </div>
             </div>
             </div>
@@ -139,5 +146,12 @@
         </div>
         <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
+
+        <script>
+          var menu = document.querySelector("#floatmenu");
+          menu.onclick =function(){
+            menu.classList.toggle("active");
+          }
+        </script>
     </body>
 </html>
