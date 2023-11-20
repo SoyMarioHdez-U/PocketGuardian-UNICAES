@@ -1,6 +1,6 @@
 
 <?php
-
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     }
 
-  
+*/  
 ?>
 
 
@@ -119,8 +119,8 @@
               </div>
 
               <div class="submenu">
-              <i style="--i:1;" class='bx bxs-wallet'></i>
-              <i style="--i:2;" class='bx bx-dollar-circle'></i>
+              <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
+              <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
               </div>
             </div>
             </div>
