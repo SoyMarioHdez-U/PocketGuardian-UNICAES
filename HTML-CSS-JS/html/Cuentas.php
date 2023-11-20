@@ -128,6 +128,24 @@
             
             </div>
 
+
+           <section class="modal_cuenta">
+            <div class="modal_containerC">
+              <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
+              <i class='bx bxs-wallet'>Cuenta</i>
+              <input class="datos"  type="texto"  placeholder="Nombre de Cuenta" nombre="Nueva_cuenta">
+              <input type="button" class="boton" id="Agregar" value="Añadir">
+              <input type="button" class="boton" id="cancelar" value="Cancelar">
+            </div>  
+        
+
+
+
+           </section>
+
+
+           </div>
+
             
         </div>
         <div class="footer">
