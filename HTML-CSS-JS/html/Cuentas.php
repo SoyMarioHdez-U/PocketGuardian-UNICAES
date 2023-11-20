@@ -34,9 +34,9 @@
 
       //Obtener los nombres de las cuentas
       $cuentas = obtenerDatosCompletosDeCuentas($conexion, $id_usuario);
-      foreach ($cuentas as $nombre) {
+    //  foreach ($cuentas as $nombre) {
 //        echo $nombre . "<br>";
-    }
+    //}
 
   
 ?>

@@ -9,13 +9,13 @@
       //Obtener el ID para luego mostrar el total de su cuenta
       $id_usuario = obtenerID($conexion, $correo_electronico);
       //echo " | Id del usuario es: $id_usuario";
-
-
-
-    $nombre_cuenta = $_POST['nombre_cuenta'];
-    $descripcion = $_POST['descripcion'];
-    $cuenta = $_POST['cuenta'];
-
+    
+      $cuentas = obtenerDatosCompletosDeCuentas($conexion, $id_usuario);
+      
+      //Atributos propios de la transacción
+      $monto = $_POST['monto'];
+      $monto = $_POST['monto'];
+    
 
     //Validar que todos los campos estén llenos
     if (empty($nombre_cuenta)) {
