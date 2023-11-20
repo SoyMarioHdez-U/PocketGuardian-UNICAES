@@ -1,5 +1,6 @@
-<?php
 
+<?php
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -34,6 +35,8 @@
       foreach ($nombre_de_cuentas as $nombre) {
 //        echo $nombre . "<br>";
     }
+
+    */
 ?>
 
 
