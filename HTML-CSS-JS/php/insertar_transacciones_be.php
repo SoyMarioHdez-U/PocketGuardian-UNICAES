@@ -37,7 +37,7 @@
     $fecha_mysql = date("Y-m-d", strtotime($fecha));
 
     $query = "INSERT INTO transacciones(monto, descripcion, fecha, id_cuenta, id_tipo) 
-              VALUES($monto, '$descripcion', '2023-10-10', $id_cuenta, $tipo_transaccion)";
+              VALUES($monto, '$descripcion', '$fecha_mysql', $id_cuenta, $tipo_transaccion)";
 
     //verificar que no se repita el nombre de la cuenta
     $insertar_transaccion = mysqli_query($conexion, $query);
