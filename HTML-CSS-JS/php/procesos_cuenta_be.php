@@ -92,34 +92,39 @@ function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
     if ($resultado) {
         // Inicializar un array para almacenar los nombres de cuenta
         $cuentas = array();
+        
 
         // Recorrer los resultados y almacenar los nombres de cuenta en el array
         while ($fila = $resultado->fetch_assoc()) {
             $id_cuenta = $fila['id_cuenta'];
             $nombre_cuenta = $fila['nombre_cuenta'];
             $total = $fila['balance_total'];
+
+            $transacciones = array();    
             
             //AQUÍ HACER EL ARRAY DE TRANSACCIONES
             $consulta_transacciones = "SELECT * FROM transacciones WHERE id_cuenta = $id_cuenta";
             $resultado2 = mysqli_query($conexion, $consulta_transacciones);
 
             if($resultado2){
-                $transacciones = array();
                 
-                while($fila = $resultado2->fetch_assoc()){
-                    $monto = $fila['monto'];
-                    $descripcion = $fila['descripcion'];
-                    $fecha = $fila['fecha'];
-                    $nuevaTransaccion = new Transaccion($monto, $descripcion, $fecha);
+                
+                while($fila2 = $resultado2->fetch_assoc()){
+                    $monto = $fila2['monto'];
+                    $descripcion = $fila2['descripcion'];
+                    $fecha = $fila2['fecha'];
+                    $tipo_transaccion = ($fila2['id_tipo'] == 0) ? 'ingreso' : 'egreso';
+                    $nuevaTransaccion = new Transaccion($monto, $descripcion, $fecha, $tipo_transaccion);
                     $transacciones[] = $nuevaTransaccion;
                 }
-            
+                
             }
-
+            
             $nuevaCuenta = new Cuenta($id_cuenta, $nombre_cuenta, $total, $transacciones);
             $cuentas[] = $nuevaCuenta;
             
         }
+        //var_dump($cuentas);
 
         return $cuentas;
 
