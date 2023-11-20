@@ -120,10 +120,6 @@
             
           </div>
         </div>
-
-        <div class="cuentas">
-
-        </div>
         <div class="footer">
             <div class="logoFooter"></div>
             <div class="socialNetworks">
