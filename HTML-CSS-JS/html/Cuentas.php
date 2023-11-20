@@ -1,6 +1,6 @@
 
 <?php
-
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     }
 
-  
+  */
 ?>
 
 
@@ -103,13 +103,15 @@
               </div>
             
             <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
-                <div class="cheques"> <!-- Contenerdor de los cheques creados -->
-                <div class="mensajeBienvenida">
+            <div class="mensajeBienvenida">
                 <?php
                 // Mostrar mensaje de bienvenida
                 echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
                 ?> 
             </div>
+
+                <div class="cheques"> <!-- Contenerdor de los cheques creados -->
+                
                 <!-- Espacio para los contenedores creados -->
             <div class="icons">
             <i class='bx bx-message-square-add'></i>
