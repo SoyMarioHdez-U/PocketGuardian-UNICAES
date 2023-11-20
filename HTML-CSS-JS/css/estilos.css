@@ -29,7 +29,7 @@ body{
   font-family: "Pacifico", "unna-regular";
   width: 100%;
   height: 100%;
-    background:#DBEAD2; /* Navegadores viejos */
+  background:#DBEAD2; /* Navegadores viejos */
   background: -webkit-linear-gradient(
     to left,
     #DBEAD2,
@@ -147,7 +147,7 @@ p{
 .sidebar ul {
   margin: 0;
   padding: 0;
-  margin-top: 60px;
+  margin-top: 5px;
 }
 .sidebar ul li {
   margin: 5%;
@@ -209,4 +209,10 @@ p{
   
   .socialNetworks{
     padding: 10px;
+  }
+
+  .mensajeBienvenida{
+    font-family: "Italianno";
+    font-size: 16px;
+
   }

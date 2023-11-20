@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div>
+            
               <div class='sidebar-menu'>
                   
                   <ul>
@@ -117,12 +117,8 @@
 
                 </div>
               </div>
-            </div>
+            
           </div>
-        </div>
-
-        <div class="cuentas">
-
         </div>
         <div class="footer">
             <div class="logoFooter"></div>
