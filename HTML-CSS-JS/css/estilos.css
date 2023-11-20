@@ -78,6 +78,8 @@ p{
 }
 
 .header{
+    padding-left: 1%;
+    padding-right: 2%;
     height: 60px;
     width: 100%;
     display: flex;
@@ -107,13 +109,13 @@ p{
 .sidebar-menu {
   position:static;
   width: 50px;
-  height: 70px;
+  height: 200px;
   padding: 0.5%;
   padding-bottom: 15%;
-  padding-top: 10%;
-  background-color: #C1D0B5;
+  padding-top: 7%;
+  background-color: #b8cea6;
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items: center;
   text-align: center;
   font-family: 'Young Serif';
@@ -121,7 +123,8 @@ p{
 .sidebar-menu {
   position: static;
   width: 120px;
-  background-color: #C1D0B5;
+  height: 100px;
+  background-color: #b8cea6;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -157,7 +160,7 @@ p{
 .sidebar ul li {
   margin: 5%;
   padding: 5%;
-  margin-top: 20px;
+  margin-top: 20%;
   list-style-type: none;
 }
 .sidebar ul li a.expandable {
@@ -200,6 +203,7 @@ p{
 
 
 .footer{
+    margin-top: 40%;
     font-family: 'Inria Sans';
     align-items: center;
     text-align: center;
@@ -223,3 +227,5 @@ p{
     font-size: 24px;
 
   }
+
+  

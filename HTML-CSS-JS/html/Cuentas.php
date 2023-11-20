@@ -1,6 +1,6 @@
 
 <?php
-
+/*
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     }
 
-  
+  */
 ?>
 
 
@@ -55,6 +55,7 @@
 
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         
     </head>
@@ -102,23 +103,25 @@
               </div>
             
             <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
-                <div class="cheques"> <!-- Contenerdor de los cheques creados -->
-                <div class="mensajeBienvenida">
+            <div class="mensajeBienvenida">
                 <?php
                 // Mostrar mensaje de bienvenida
                 echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
-                ?>
-              </div>
+                ?> 
+            </div>
+
+                <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
-
-                  <!-- Espacio para los contenedores creados -->
-
-
-
-                </div>
-              </div>
+                <!-- Espacio para los contenedores creados -->
+            <div class="icons">
+            <i class='bx bx-message-square-add'></i>
+            </div>
+            </div>
+            </div>
             
             </div>
+
+            
         </div>
         <div class="footer">
             <div class="logoFooter"></div>
