@@ -1,6 +1,6 @@
 
 <?php
-/*
+
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     }
 
-    */
+  
 ?>
 
 
@@ -99,6 +99,7 @@
                     </li>
                   </ul>
               </div>
+              <div class = "containerCheques"> <!-- Contenerdor de espacio de la pagina-->
               <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
               <div class="mensajeBienvenida">
                 <?php
