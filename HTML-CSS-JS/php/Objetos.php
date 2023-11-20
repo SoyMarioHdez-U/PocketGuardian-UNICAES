@@ -21,7 +21,7 @@
         
 
 
-        public function __construct($id_cuenta, $nombre_cuenta, $saldo = 0) {
+        public function __construct($id_cuenta, $nombre_cuenta, $saldo = 0, $transacciones) {
             $this->id_cuenta = $id_cuenta;
             $this->nombre_cuenta = $nombre_cuenta;
             $this->saldo = $saldo;

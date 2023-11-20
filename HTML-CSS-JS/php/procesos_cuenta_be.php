@@ -75,8 +75,8 @@ function obtenerDatosDeCuentas($conexion, $id_usuario){
 
 
 function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
-   
-    // Consulta SQL para obtener los nombres de cuenta del usuario específico
+
+    // Consulta SQL para obtener LOS DATOS DE LA CUENTA
     $consulta_cuentas = "SELECT c.id_cuenta, c.nombre_cuenta, u.nombre,
                         COALESCE(SUM(CASE WHEN id_tipo = 0 THEN t.monto ELSE -t.monto END), 0) AS balance_total
                         FROM cuenta c
@@ -99,7 +99,24 @@ function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
             $nombre_cuenta = $fila['nombre_cuenta'];
             $total = $fila['balance_total'];
             
-            $nuevaCuenta = new Cuenta($id_cuenta, $nombre_cuenta, $total);
+            //AQUÍ HACER EL ARRAY DE TRANSACCIONES
+            $consulta_transacciones = "SELECT * FROM transacciones WHERE id_cuenta = $id_cuenta";
+            $resultado2 = mysqli_query($conexion, $consulta_transacciones);
+
+            if($resultado2){
+                $transacciones = array();
+                
+                while($fila = $resultado2->fetch_assoc()){
+                    $monto = $fila['monto'];
+                    $descripcion = $fila['descripcion'];
+                    $fecha = $fila['fecha'];
+                    $nuevaTransaccion = new Transaccion($monto, $descripcion, $fecha);
+                    $transacciones[] = $nuevaTransaccion;
+                }
+            
+            }
+
+            $nuevaCuenta = new Cuenta($id_cuenta, $nombre_cuenta, $total, $transacciones);
             $cuentas[] = $nuevaCuenta;
             
         }
