@@ -114,9 +114,13 @@
             <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-            <div class="botones">
-            <input type="button" class="cuenta" id="cuenta" value="Nueva Cuenta">
-            <input type="button" class="transaccion" id="trans" value="Transaccion">
+            <div class="opciones">
+              <div class="botonesss">
+              <input type="button" class="cuenta" id="cuenta" value="Nueva Cuenta">
+              <input type="button" class="transaccion" id="trans" value="Transaccion">
+
+              </div>
+            
             </div>
 
             </div>
@@ -133,7 +137,7 @@
               
             </div>  
 
-            <div class="modal_cuenta trans ">
+            <div class="modal_cuenta trans hide">
           
             <div class="modal_containerC">
               <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
