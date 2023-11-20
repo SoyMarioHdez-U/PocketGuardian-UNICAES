@@ -3,6 +3,8 @@
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
+  include '../php/Objetos.php';
+
 
   if(!isset($_SESSION['usuario'])){
     echo '
@@ -30,8 +32,8 @@
       //echo " | Id del usuario es: $id_usuario";
 
       //Obtener los nombres de las cuentas
-      $nombre_de_cuentas = obtenerDatosDeCuentas($conexion, $id_usuario);
-      foreach ($nombre_de_cuentas as $nombre) {
+      $cuentas = obtenerDatosCompletosDeCuentas($conexion, $id_usuario);
+      foreach ($cuentas as $nombre) {
 //        echo $nombre . "<br>";
     }
 ?>
@@ -57,7 +59,7 @@
       <!--  Aquí envío el dato de cuántas cuentas posee el usuario !-->
       <script>
         var totalCuentas = <?php echo $total_cuentas; ?>;
-        var nombresCuenta = <?php echo json_encode($nombre_de_cuentas); ?>;
+        var nombresCuenta = <?php echo json_encode($cuentas); ?>;
       </script>
 
         <div class="container">

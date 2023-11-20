@@ -1,4 +1,5 @@
 <?php
+//include '../php/Objetos.php';
 
 function obtenerNumeroCuentas($conexion, $correo_electronico) {
     $query = "SELECT u.id_usuario, u.nombre, u.apellido, u.correo, COUNT(c.id_cuenta) as total_cuentas
@@ -72,6 +73,42 @@ function obtenerDatosDeCuentas($conexion, $id_usuario){
     }
 }
 
+
+function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
+   
+    // Consulta SQL para obtener los nombres de cuenta del usuario específico
+    $consulta_cuentas = "SELECT c.id_cuenta, c.nombre_cuenta, u.nombre,
+                        SUM(CASE WHEN id_tipo = 0 THEN t.monto ELSE -t.monto END) AS balance_total
+                        FROM cuenta c
+                        JOIN usuario u USING(id_usuario)
+                        JOIN transacciones t ON t.id_cuenta = c.id_cuenta
+                        GROUP BY c.id_cuenta, c.nombre_cuenta, u.nombre";
+
+    // Ejecutar la consulta
+    $resultado = mysqli_query($conexion, $consulta_cuentas);
+
+    // Verificar si la consulta fue exitosa
+    if ($resultado) {
+        // Inicializar un array para almacenar los nombres de cuenta
+        $cuentas = array();
+
+        // Recorrer los resultados y almacenar los nombres de cuenta en el array
+        while ($fila = $resultado->fetch_assoc()) {
+            $nombre_cuenta = $fila['nombre_cuenta'];
+            $total = $fila['balance_total'];
+            
+            $nuevaCuenta = new Cuenta($nombre_cuenta, $total);
+            $cuentas[] = $nuevaCuenta;
+            
+        }
+
+        return $nombresDeCuenta;
+
+    } else {
+        // Manejar el caso en el que la consulta falla
+        echo "Error en la consulta: " . $conexion->error;
+    }
+}
 
 
 function obtenerID($conexion, $correo_electronico){
