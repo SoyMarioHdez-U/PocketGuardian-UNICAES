@@ -1,6 +1,6 @@
 
 <?php
-/*
+
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     }
 
-  */
+  
 ?>
 
 
@@ -52,7 +52,7 @@
         
         <link rel="icon" href="../Png/pgLogo1" type="image/png">
 
-
+        
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
