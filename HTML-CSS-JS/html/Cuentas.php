@@ -1,6 +1,6 @@
 
 <?php
-/*
+
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     }
 
-    */
+    
 ?>
 
 

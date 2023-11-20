@@ -102,7 +102,7 @@ function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
             
         }
 
-        return $nombresDeCuenta;
+        return $cuentas;
 
     } else {
         // Manejar el caso en el que la consulta falla
