@@ -30,6 +30,7 @@ session_start();
       //Obtener el ID para luego mostrar el total de su cuenta
       $id_usuario = obtenerID($conexion, $correo_electronico);
       //echo " | Id del usuario es: $id_usuario";
+      $cuentas = obtenerDatosCompletosDeCuentas($conexion, $id_usuario);
 
 
 
@@ -44,6 +45,12 @@ session_start();
     <title>Insertar cuentas y registros</title>
 </head>
 <body>
+
+<script>
+        var totalCuentas = <?php echo $total_cuentas; ?>;
+        var nombresCuenta = <?php echo json_encode($cuentas); ?>;
+        console.log("ENVIANDO DESDE INSERTAR",<?php echo $id_usuario; ?>);
+</script>
     
 <!--Formulario de login y registro-->
 <div class="form-container2">
@@ -55,23 +62,17 @@ session_start();
                    
                    
                    <button class="botones">Añadir</button>
-   
 
-   
-                   
-                
-   
                </form>
 
+               
                <form action="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/php/insertar_transacciones_be.php" method="POST" class="formulario-login">
                    <h1>PocketGuardian</h1>
                    <h2>Añadir transacción</h2>
                    Monto: $ <input class="datos" type="number" inputmode="numeric" placeholder="Monto"  name="monto">
                    Descripción: <input class="datos" type="text" placeholder="Descripción"  name="descripcion">
-                   Cuenta: <select name="cuenta">
-                        <option value="5">TigoMoney</option>
-                        <option value="value2" selected>Cuenta 2</option>
-                        <option value="value3">Cuenta 3</option>
+                   Cuenta: <select class ="id_cuentas"name="cuenta">
+                        
                     </select>
                     Tipo de transacción: <select name="tipo_transaccion">
                         <option value="0">Ingreso</option>
@@ -87,7 +88,7 @@ session_start();
    
                </form>
            </div>
-
+           <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/transacciones.js"></script>
     
 </body>
 </html>
