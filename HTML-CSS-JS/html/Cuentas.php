@@ -114,16 +114,10 @@
             <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-                <div class="menu-flotante" id="floatmenu">
-    <div class="menu">
-        <i id="mainIcon" class='bx bx-message-square-add'></i>
-    </div>
-
-    <div class="submenu">
-        <i id="cuentaIcon" style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
-        <i id="transaccionIcon" style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
-    </div>
-</div>
+            <div class="botones">
+            <input type="button" class="cuenta" id="cuenta" value="Nueva Cuenta">
+            <input type="button" class="transaccion" id="trans" value="Transaccion">
+            </div>
 
             </div>
 
@@ -175,12 +169,7 @@
         </div>
         <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
-        <script>
-          var menu = document.querySelector("#floatmenu");
-   menu.onclick =function(){
-    menu.classList.toggle("active");
-}
-        </Script>
+  
 
         
     </body>
