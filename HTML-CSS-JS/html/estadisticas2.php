@@ -1,4 +1,3 @@
-
 <?php
 
   session_start();
@@ -54,7 +53,7 @@
 
 
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
-        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
+        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estadisticas2.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         <script  type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/modal.js'></script>
@@ -104,14 +103,8 @@
               </div>
             
             <div class = "contenedor"> <!-- Contenerdor de espacio de la pagina-->
-            <div class="mensajeBienvenida">
-                <?php
-                // Mostrar mensaje de bienvenida
-                echo "Bienvenido, " . $nombre_usuario . " " . $apellido_usuario;
-                ?> 
-            </div>
-
-            <div class="cheques"> <!-- Contenerdor de los cheques creados -->
+            
+            <div class="estadisticas"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
                 <div class="menu-flotante" id="floatmenu">

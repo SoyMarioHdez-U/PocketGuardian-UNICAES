@@ -1,5 +1,5 @@
 
-var generador = document.querySelector(".cheques"); // Importante esto, guardar en una variable el div donde se crearan los cheques
+var generador = document.querySelector(".estadisticas"); // Importante esto, guardar en una variable el div donde se crearan los cheques
 
 
 
