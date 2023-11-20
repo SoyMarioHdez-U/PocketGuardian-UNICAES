@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div>
+            
               <div class='sidebar-menu'>
                   
                   <ul>
@@ -115,7 +115,7 @@
 
                 </div>
               </div>
-            </div>
+            
           </div>
         </div>
 
