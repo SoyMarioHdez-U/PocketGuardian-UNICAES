@@ -5,12 +5,14 @@
         public $descripcion;
         public $fecha;
         public $tipo_movimiento;
+        public $id_cuenta;
 
-        public function __construct($monto, $descripcion, $fecha, $tipo_movimiento) {
+        public function __construct($monto, $descripcion, $fecha, $tipo_movimiento, $id_cuenta) {
             $this->monto = $monto;
             $this->descripcion = $descripcion;
             $this->fecha = $fecha;
             $this->tipo_movimiento = $tipo_movimiento;
+            $this->id_cuenta = $id_cuenta;
         }
     }
 

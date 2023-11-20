@@ -114,7 +114,7 @@ function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
                     $descripcion = $fila2['descripcion'];
                     $fecha = $fila2['fecha'];
                     $tipo_transaccion = ($fila2['id_tipo'] == 0) ? 'ingreso' : 'egreso';
-                    $nuevaTransaccion = new Transaccion($monto, $descripcion, $fecha, $tipo_transaccion);
+                    $nuevaTransaccion = new Transaccion($monto, $descripcion, $fecha, $tipo_transaccion, $id_cuenta);
                     $transacciones[] = $nuevaTransaccion;
                 }
                 
@@ -147,6 +147,23 @@ function obtenerID($conexion, $correo_electronico){
         return $id_usuario;
     }
     return 0;
+}
+
+function obtenerIDcuenta($conexion, $id_usuario, $nombre_cuenta){
+    $consulta_id_cuenta = mysqli_query($conexion, "SELECT id_cuenta FROM cuenta WHERE nombre_cuenta='$nombre_cuenta' AND id_usuario='$id_usuario'");
+
+    // Verificar si la consulta fue exitosa
+    if($consulta_id_cuenta){
+        // Obtener los datos del usuario
+        $fila_cuenta = mysqli_fetch_assoc($consulta_id_cuenta);
+        $id_cuenta = $fila_cuenta['id_cuenta'];            
+        return $id_cuenta;
+    }
+    return 0;
+}
+
+function obtenerCuentasUsuario($conexion, $id_usuario){
+
 }
 
 function obtenerBalance($conexion, $id_usuario){

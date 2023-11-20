@@ -68,7 +68,7 @@ session_start();
                    <h2>Añadir transacción</h2>
                    Monto: $ <input class="datos" type="number" inputmode="numeric" placeholder="Monto"  name="monto">
                    Descripción: <input class="datos" type="text" placeholder="Descripción"  name="descripción">
-                   <select name="select">
+                   <select name="cuenta">
                         <option value="value1">Cuenta 1</option>
                         <option value="value2" selected>Cuenta 2</option>
                         <option value="value3">Cuenta 3</option>
