@@ -63,16 +63,21 @@ session_start();
    
                </form>
 
-               <form action="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/php/registro_usuario_be.php" method="POST" class="formulario-login">
+               <form action="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/php/insertar_transacciones_be.php" method="POST" class="formulario-login">
                    <h1>PocketGuardian</h1>
                    <h2>Añadir transacción</h2>
                    Monto: $ <input class="datos" type="number" inputmode="numeric" placeholder="Monto"  name="monto">
-                   Descripción: <input class="datos" type="text" placeholder="Descripción"  name="descripción">
-                   <select name="cuenta">
-                        <option value="value1">Cuenta 1</option>
+                   Descripción: <input class="datos" type="text" placeholder="Descripción"  name="descripcion">
+                   Cuenta: <select name="cuenta">
+                        <option value="5">TigoMoney</option>
                         <option value="value2" selected>Cuenta 2</option>
                         <option value="value3">Cuenta 3</option>
                     </select>
+                    Tipo de transacción: <select name="tipo_transaccion">
+                        <option value="0">Ingreso</option>
+                        <option value="1" selected>Egreso</option>
+                    </select>
+                    Fecha:  <input type="date" name="fecha" id="fecha" max="<?php echo date('2023-11-20'); ?>">
                    
                    <button class="botones">Añadir</button>
    

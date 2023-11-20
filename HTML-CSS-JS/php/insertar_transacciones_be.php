@@ -3,6 +3,7 @@
 
     include 'conexion_be.php';
     include 'procesos_cuenta_be.php';
+    include 'Objetos.php';
     
     $correo_electronico = $_SESSION['usuario'];
 
@@ -14,11 +15,15 @@
       
       //Atributos propios de la transacción
       $monto = $_POST['monto'];
-      $monto = $_POST['monto'];
+      $descripcion = $_POST['descripcion'];
+      $id_cuenta = $_POST['cuenta'];
+      $tipo_transaccion = $_POST['tipo_transaccion'];
+      $fecha = $_POST['fecha'];
+
     
 
     //Validar que todos los campos estén llenos
-    if (empty($nombre_cuenta)) {
+    if (empty($monto)||empty($descripcion)||empty($id_cuenta)||empty($tipo_transaccion)) {
         echo '
             <script>
                 alert("Por favor llena todos los campos.");
@@ -28,31 +33,16 @@
         exit(); 
     }
 
-    $query = "INSERT INTO cuenta(nombre_cuenta, id_usuario) 
-              VALUES('$nombre_cuenta', '$id_usuario')";
+    $query = "INSERT INTO transacciones(monto, descripcion, fecha, id_cuenta, id_tipo) 
+              VALUES($monto, '$descripcion', '2023-10-10', $id_cuenta, $tipo_transaccion)";
 
     //verificar que no se repita el nombre de la cuenta
-    $verificar_cuenta = mysqli_query($conexion, "SELECT * FROM cuenta WHERE id_usuario='$id_usuario' AND nombre_cuenta='$nombre_cuenta';");
+    $insertar_transaccion = mysqli_query($conexion, $query);
 
-    if(mysqli_num_rows($verificar_cuenta)>0){
+    if($insertar_transaccion){
         echo '
         <script>
-            alert("Usted ya posee una cuenta con ese nombre, ingrese uno nuevo.");
-            window.location = "../html/prueba_insertar.php";
-        </script>
-        ';
-        mysqli_close($conexion);
-        
-    }
-
-
-
-    $ejecutar = mysqli_query($conexion, $query);
-
-    if($ejecutar){
-        echo '
-        <script>
-            alert("Cuenta almacenada con éxito");
+            alert("Transacción almacenada con éxito");
             window.location = "../html/Cuentas.php";
         </script>
         ';
@@ -60,7 +50,8 @@
     else{
         echo '
         <script>
-            alert("Algo salió mal :( Intenta de nuevo.")
+            alert("Algo salió mal :( Intenta de nuevo.");
+            window.location = "../html/prueba_insertar.php";
         </script>
     ';
     }

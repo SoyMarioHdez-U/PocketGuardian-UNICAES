@@ -1,6 +1,6 @@
 
 <?php
-/*
+
   session_start();
   include '../php/conexion_be.php';
   include '../php/procesos_cuenta_be.php';
@@ -38,7 +38,7 @@
 //        echo $nombre . "<br>";
     //}
 
-*/  
+
 ?>
 
 
@@ -110,19 +110,19 @@
                 ?> 
             </div>
 
-                <div class="cheques"> <!-- Contenerdor de los cheques creados -->
+            <div class="cheques"> <!-- Contenerdor de los cheques creados -->
                 
                 <!-- Espacio para los contenedores creados -->
-            <div class="menu-flotante" Id="floatmenu">
-              <div class="menu">
-              <i class='bx bx-message-square-add'></i>
-              </div>
+              <div class="menu-flotante" Id="floatmenu">
+                <div class="menu">
+                  <i class='bx bx-message-square-add'></i>
+                </div>
 
-              <div class="submenu">
-              <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
-              <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+                <div class="submenu">
+                  <i style="--i:1;" class='bx bxs-wallet'>Cuenta</i>
+                  <i style="--i:2;" class='bx bx-dollar-circle'>Transaccion</i>
+                </div>
               </div>
-            </div>
             </div>
             </div>
             
