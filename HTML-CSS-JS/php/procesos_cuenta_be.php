@@ -92,6 +92,7 @@ function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
     if ($resultado) {
         // Inicializar un array para almacenar los nombres de cuenta
         $cuentas = array();
+        $transacciones = array();
 
         // Recorrer los resultados y almacenar los nombres de cuenta en el array
         while ($fila = $resultado->fetch_assoc()) {
@@ -104,7 +105,7 @@ function obtenerDatosCompletosDeCuentas($conexion, $id_usuario){
             $resultado2 = mysqli_query($conexion, $consulta_transacciones);
 
             if($resultado2){
-                $transacciones = array();
+                
                 
                 while($fila = $resultado2->fetch_assoc()){
                     $monto = $fila['monto'];
