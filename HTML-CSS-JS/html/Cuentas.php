@@ -116,39 +116,16 @@
                 <!-- Espacio para los contenedores creados -->
             <div class="opciones">
               <div class="botonesss">
-              <input type="button" class="cuenta" id="cuenta" value="Nueva Cuenta">
-              <input type="button" class="transaccion" id="trans" value="Transaccion">
+              <input type="button" class="cuenta" id="cuenta" value="Nueva Cuenta"  href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/crear_cuenta.php">
+              <input type="button" class="transaccion" id="trans" value="Transaccion" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/transaccion.php">
 
               </div>
             
             </div>
 
-            </div>
+    </div>
 
             
-           <div class="modal_cuenta cuentas hide">
-          
-            <div class="modal_containerC">
-              <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
-              <i class='bx bxs-wallet'></i>
-              <input class="datos"  type="texto"  placeholder="Nombre de Cuenta" nombre="Nueva_cuenta">
-              <input type="button" class="boton" id="Agregar" value="Añadir">
-              <input type="button" class="boton" id="cancelar" value="Cancelar">
-              
-            </div>  
-
-            <div class="modal_cuenta trans hide">
-          
-            <div class="modal_containerC">
-              <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
-              <i class='bx bx-dollar-circle'></i>
-              <input class="datos"  type="texto"  placeholder="Monto" nombre="Monto">
-              <input class="datos"  type="texto"  placeholder="Descripcion" nombre="Descripcion">
-              <input class="datos"  type="combobox" placeholder="select" nombre="cuentas">
-              <input type="button" class="boton" id="Agregar" value="Añadir">
-              <input type="button" class="boton" id="cancelar" value="Cancelar">
-              
-            </div>  
         
     </div>
 
@@ -173,13 +150,5 @@
         </div>
         <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
-        <script>
-          var menu = document.querySelector("#floatmenu");
-   menu.onclick =function(){
-    menu.classList.toggle("active");
-}
-        </Script>
-
-        
     </body>
 </html>

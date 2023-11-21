@@ -16,12 +16,14 @@
         <script  type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/modal.js'></script>
 </head>
 <body>
-<div class="modal_cuenta ">
+<div class="modal_cuenta">
           
           <div class="modal_containerC">
             <h2 class="titulo-modal">Crear Nueva Cuenta</h2>
-            <i class='bx bxs-wallet'></i>
-            <input class="datos"  type="texto"  placeholder="Nombre de Cuenta" nombre="Nueva_cuenta">
+            <i class='bx bx-dollar-circle'></i>
+            <input class="datos"  type="texto"  placeholder="Monto" nombre="Monto">
+            <input class="datos"  type="texto"  placeholder="Descripcion" nombre="Descripcion">
+            <input class="datos"  type="combobox" placeholder="select" nombre="cuentas">
             <input type="button" class="boton" id="Agregar" value="Añadir">
             <input type="button" class="boton" id="cancelar" value="Cancelar" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/html/Cuentas.php">
             
