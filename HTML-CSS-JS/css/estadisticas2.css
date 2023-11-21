@@ -60,7 +60,7 @@ body
     background-repeat: no-repeat;
     box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
     width: 55%;
-    height:1800px;
+    height:1200px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
