@@ -10,7 +10,7 @@
 
 
         <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/estilos.css">
-        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/cheques.css">
+        <link rel="stylesheet" href="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/css/ajustes.css">
         <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
         
     </head>
@@ -49,6 +49,40 @@
                     </li>
                   </ul>
               </div>
+
+              <div class="contenedor-ajustes">
+                <div class="temas">
+                  <h1>TEMAS</h1>
+                  <input type="button" class="dark_mode" value="Tema Oscuro">
+                  <input type="button" class="clear_mode" value="Tema original">
+                  <input type="button" class="tema1" value="Rosa">
+                  <input type="button" class="tema2" value="azul">
+
+                </div>
+
+                <div class="divisa">
+
+                </div>
+
+
+              </div>
+
+              <div class="footer">
+            <div class="logoFooter"></div>
+            <div class="socialNetworks">
+                <a href="http://www.facebook.com"><img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/facebook.png"></a>
+                <a href="http://www.twitter.com"><img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/twitter.png"></a>
+                <a href="http://www.instagram.com"><img src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/img/instagram.png"></a>
+            </div>
+                <p>© 2023 PocketGuardian</p>
+                <p class="lastFooter">Tecnologías Web - Universidad Católica de El Salvador</p>
+            </div>
+        </div>
+        <div class="fondo">
+        
+        </div>
+        <script src="http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/cuenta.js"></script>
+        <script type='text/javascript' src='http://localhost/PocketGuardian-UNICAES/HTML-CSS-JS/js/sidebar.js'></script>
     
 </body>
 </html>
