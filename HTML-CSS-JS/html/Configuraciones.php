@@ -61,6 +61,12 @@
                 </div>
 
                 <div class="divisa">
+                <h1>Divisa</h1>
+                <select  class="monedas" value="select divisa"></select>
+                <h1>Otros</h1>
+                <input type="button" class="piliticas" value="Politica y Privacidad">
+                <input type="button" class="Nosotros" value="Nosotros">
+                <input type="button" class="guardar" value="Guardar cambios">
 
                 </div>
 
